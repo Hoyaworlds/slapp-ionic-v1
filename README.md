@@ -1,44 +1,46 @@
-# LightIntel
+# SLApp-Ionic-v1
 
 ## Introduction
 
-This repo is the software part of an intelligent lighting system for family use, which was run on an arm development board with Android 4.4.
+This repo is the software part of an intelligent lighting system for family use, which was run on an ESP8266-Arduino board with Android 4.4.
+It's a fork of https://github.com/w-zx/LightIntel
 
 Here is a simple *demo*:
 
 ![Demo](http://ww3.sinaimg.cn/mw690/a60a3287jw1f56m6vacwyg208t0g9tsf.gif)
 
-It was a Hybrid app based on Apache Cordova, which is a great platform with swift development ability and rich tool chains for debugging. It is also a practise of Google Angular framework with Ionic.
+It was a Hybrid app based on Ionic-V1, which is a great platform with swift development ability and rich tool chains for debugging. It is also a practise of Google Angular framework with Ionic.
 
-As for the hardware part, I made a cute lampshade with the head of KoroSensei, one of my favorite anime character.![](http://ww4.sinaimg.cn/mw690/a60a3287jw1f56mbr7f34j20um1degrj.jpg)
+As for the hardware part, 
+[![Demo video WebClient](https://j.gifs.com/kRPrzN.gif)](https://youtu.be/rc6QVHKAXBs)
+[![Demo video Apple Homekit integration](https://j.gifs.com/gJP2o6.gif)](https://youtu.be/4JnGXZaPnrw)
 
-Inside the lamp are three **300mA-1W** LED in the colors of RGB, respectively, and three PT4115 chips to supply the current and are controled by the PWM signal sent by an Arduino UNO R3. The Arduino was linked to the Android development board via bluetooth.
 
 ## How to use
 
 You must have the following dependency installed first:
 
-- Cordova `$ npm install -g cordova`
+- Ionic + Cordova `$ npm install -g ionic cordova`
 
-- Ionic `npm install -g ionic`
+- Install modules `npm install`
 
 - [ngCordova](http://ngcordova.com)
 
-and then install BluetoothSerial plugin with:
+and then install MQTT plugin with:
 
-`$ cordova plugin add cordova-plugin-bluetooth-serial`
+`$ ionic cordova plugin add https://github.com/arcoirislabs/cordova-plugin-mqtt.git`
 
 add a platform with:
 
-`$ ionic platform add android`
+`$ ionic cordova platform add android`
 
 and then test the result with:
 
-`$ ionic run android -device`
+`$ ionic cordova run android -device`
 
 or
 
-`$ ionic run browser`
+`$ ionic serve`
 
 ## License
 

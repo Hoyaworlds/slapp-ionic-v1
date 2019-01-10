@@ -28,13 +28,13 @@
     <script src="js/ionic-timepicker.bundle.min.js"></script>
     <script src="js/roundProgress.min.js"></script>
     <script src="js/moment.min.js"></script>
-    
+
 <ion-nav-view name=​"tab-timepicker" class=​"view-container tab-content" nav-view=​"active" nav-view-transition=​"ios" nav-view-direction=​"swap" nav-swipe>​
   </head>
   <body ng-app="app" animation="slide-left-right-ios7">
-  <div>
+   <div>
     <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
-        <ion-side-menu-content>
+        <!--<ion-side-menu-content>-->
             <ion-nav-bar class="bar-stable">
                 <ion-nav-back-button></ion-nav-back-button>
                 <ion-nav-buttons side="left">
@@ -42,13 +42,19 @@
                 </ion-nav-buttons>
             </ion-nav-bar>
             <ion-nav-view></ion-nav-view>
-        </ion-side-menu-content>
-        <ion-side-menu side="left" id="side-menu21">
-            <ion-header-bar class="bar-stable">
-                <div class="title">Menu</div>
-            </ion-header-bar>
-            <ion-content padding="false" class="side-menu-left has-header"></ion-content>
-        </ion-side-menu>
+        <!--</ion-side-menu-content>-->
+        <!--<ion-side-menu side="left" id="side-menu21">-->
+            <!--&lt;!&ndash;<ion-header-bar class="bar-stable">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="title">Menu</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</ion-header-bar>&ndash;&gt;-->
+            <!--&lt;!&ndash;<ion-content padding="false" class="side-menu-left has-header"></ion-content>&ndash;&gt;-->
+            <!--<ion-header-bar class="expanded">-->
+                <!--<img ng-src="img/dp.png" class="avatar motion spin fade">-->
+                <!--<div class="menu-bottom">-->
+                    <!--{{user_info.email}}-->
+                <!--</div>-->
+            <!--</ion-header-bar>-->
+        <!--</ion-side-menu>-->
     </ion-side-menus>
 </div>
   </body>

@@ -39,6 +39,25 @@ angular.module('app.routes', [])
       }
     }
   })
+  .state('tabsController.settings', {
+    url: '/page5',
+    views:{
+      'tab4':{
+      templateUrl: 'templates/settings.html',
+      controller: 'settingsCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.support', {
+    url: '/page6',
+    views:{
+      'tab5':{
+      templateUrl: 'templates/support.html',
+      controller: 'supportCtrl'
+      }
+    }
+  })
 
   .state('tabsController', {
     url: '/page1',

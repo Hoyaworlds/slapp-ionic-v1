@@ -1,5 +1,95 @@
 angular.module('app.controllers', ['ionic-timepicker', 'ionic', 'ngCordova', 'app.routes', 'app.services', 'app.directives'])
+.controller('settingsCtrl', function($scope, dataService) {
+    $scope.connect= function(){
+        cordova.plugins.CordovaMqTTPlugin.connect({
+            url:"tcp://m15.cloudmqtt.com", //a public broker used for testing purposes only. Try using a self hosted broker for production.
+            port:13738,
+            clientId:"MY_CLIENT_ID_20160814",
+            connectionTimeout:3000,
+            willTopicConfig:{
+                qos:2,
+                retain:true,
+                topic:"ebtest",
+                payload:"Messaggio di prova"
+            },
+            username:"crzllkoq",
+            password:'76Jm1o3A3gKZ',
+            keepAlive:60,
+            success:function(s){
+                console.log("connectess");
+            },
+            error:function(e){
+                console.log("connectr");
+            },
+            onConnectionLost:function (){
+                console.log("disconnect");
+                var alertPopup = $ionicPopup.alert({
+                    title: 'error',
+                    template: 'conneciton lost'
+                });
+            }
+        });
+    };
+    $scope.on= function(){
+        cordova.plugins.CordovaMqTTPlugin.publish({
+            topic:"McLighting01/in",
+            payload:"=rainbow",
+            qos:0,
+            retain:false,
+            success:function(s){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'success',
+                    template: 'message sent'
+                });
+            },
+            error:function(e){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'error',
+                    template: 'message publication failed'
+                });
+            }
+        })
+    };
+    $scope.off= function(){
+        cordova.plugins.CordovaMqTTPlugin.publish({
+            topic:"McLighting01/in",
+            payload:"=off",
+            qos:0,
+            retain:false,
+            success:function(s){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'success',
+                    template: 'message sent'
+                });
+            },
+            error:function(e){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'error',
+                    template: 'message publication failed'
+                });
+            }
+        })
+    };
+    $scope.disconnect = function(){
+        cordova.plugins.CordovaMqTTPlugin.disconnect({
+            success:function(s){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'success',
+                    template: 'client disconnected'
+                });
+            },
+            error:function(e){
+                var alertPopup = $ionicPopup.alert({
+                    title: 'error',
+                    template: 'error while disconnecting'
+                });
+            }
+        })
+    }
+})
+.controller('supportCtrl', function($scope, dataService) {
 
+})
 .controller('colorPickerCtrl', function($scope, dataService) {
 
 })
