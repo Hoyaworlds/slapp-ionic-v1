@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
@@ -9,7 +9,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-	<script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -24,38 +24,41 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/ionic-color-picker.css">
     <link rel="stylesheet" href="css/ionic-time-picker.css">
+    <!-- add palette css -->
+    <link rel="stylesheet" href="css/palette-color-picker.css">
     <script src="js/ionic-color-picker-tinycolor.js"></script>
     <script src="js/ionic-timepicker.bundle.min.js"></script>
     <script src="js/roundProgress.min.js"></script>
     <script src="js/moment.min.js"></script>
 
-<ion-nav-view name=​"tab-timepicker" class=​"view-container tab-content" nav-view=​"active" nav-view-transition=​"ios" nav-view-direction=​"swap" nav-swipe>​
-  </head>
-  <body ng-app="app" animation="slide-left-right-ios7">
-   <div>
+    <ion-nav-view name=​"tab-timepicker" class=​"view-container tab-content
+    " nav-view=​"active" nav-view-transition=​"ios" nav-view-direction=​"swap" nav-swipe>​
+</head>
+<body ng-app="app" animation="slide-left-right-ios7">
+<div>
     <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
         <!--<ion-side-menu-content>-->
-            <ion-nav-bar class="bar-stable">
-                <ion-nav-back-button></ion-nav-back-button>
-                <ion-nav-buttons side="left">
-                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-                </ion-nav-buttons>
-            </ion-nav-bar>
-            <ion-nav-view></ion-nav-view>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
         <!--</ion-side-menu-content>-->
         <!--<ion-side-menu side="left" id="side-menu21">-->
-            <!--&lt;!&ndash;<ion-header-bar class="bar-stable">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="title">Menu</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</ion-header-bar>&ndash;&gt;-->
-            <!--&lt;!&ndash;<ion-content padding="false" class="side-menu-left has-header"></ion-content>&ndash;&gt;-->
-            <!--<ion-header-bar class="expanded">-->
-                <!--<img ng-src="img/dp.png" class="avatar motion spin fade">-->
-                <!--<div class="menu-bottom">-->
-                    <!--{{user_info.email}}-->
-                <!--</div>-->
-            <!--</ion-header-bar>-->
+        <!--&lt;!&ndash;<ion-header-bar class="bar-stable">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="title">Menu</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ion-header-bar>&ndash;&gt;-->
+        <!--&lt;!&ndash;<ion-content padding="false" class="side-menu-left has-header"></ion-content>&ndash;&gt;-->
+        <!--<ion-header-bar class="expanded">-->
+        <!--<img ng-src="img/dp.png" class="avatar motion spin fade">-->
+        <!--<div class="menu-bottom">-->
+        <!--{{user_info.email}}-->
+        <!--</div>-->
+        <!--</ion-header-bar>-->
         <!--</ion-side-menu>-->
     </ion-side-menus>
 </div>
-  </body>
+</body>
 </html>
