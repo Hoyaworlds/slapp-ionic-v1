@@ -48,22 +48,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-bluetooth-serial": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-bluetooth-serial"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-mqtt": {
-    "source": {
-      "type": "registry",
-      "id": "https://github.com/arcoirislabs/cordova-plugin-mqtt.git"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-ionic-webview": {
     "source": {
       "type": "registry",

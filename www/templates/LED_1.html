@@ -1,0 +1,136 @@
+<ion-view class="page-background" title="Control Room 01" id="Control%20Room%2001">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div ng-controller="ColorCtrl as vm" ng-model="ledTest_1">
+            <div class="row">
+                <div class="col">
+                    <div class="list card">
+                        <div class="item item-divider"> RGB Sliderssss</div>
+                        <div class="item item-body">
+                            <button id="chosenColor" class="button " color-picker
+                                    model-mode="rgb" color-box="{{vm.testColors}}" ng-change="set(ledTest_1)"
+                                    ng-model="vm.testColors"
+                                    modal-title="Choose a color">
+                                Choose a color
+                            </button>
+                        </div>
+                        <div class="item item-divider"> Color Picker</div>
+                        <div class="item item-body">
+                            <button class="bttn-gradient bttn-md bttn-success" ng-click="modal.show()"> test modal
+                            </button>
+                            <script id="colorPalette" type="text/ng-template">
+                                <!--<palette-item ></palette-item>-->
+
+                                <!-- temp background (LED1)-->
+                                <ion-modal-view style="background-color : rgba(0,0,0,0);" title="Color Palette">
+                                    <ion-content overflow-scroll="true" padding="true" class="has-header">
+                                        <div class="card">
+                                            <div class="item item-divider">Palette2</div>
+                                            <div class="item item-body">
+                                                <material-picker ng-model="color" hover-model="hoverColor"
+                                                                 ng-click="palette_color(color.hex,ledTest_1)"
+                                                                 size="15"></material-picker>
+                                                <div style = "color : #ffffff" ng-show="hoverColor !== null">
+                                                    Hex: {{hoverColor.hex}} Name: {{hoverColor.name}}
+                                                    R: {{hoverColor.r}} G: {{hoverColor.g}} B: {{hoverColor.b}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ion-content>
+                                    <ion-footer-bar ng-class="::ui.headerFooterClass">
+                                        <button class="button button-stable" ng-click="modal.hide()"> cancel</button>
+                                </ion-modal-view>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="list card">
+                        <div class="item item-divider"> Color Test </div>
+                        <div class="item item-body">
+                            <ion-item>
+                                <div class = "item item-toggle">
+                                    <label class = "toggle">
+                                        <input type = "checkbox" ng-model="switch_check"
+                                               ng-change = "switch_change(ledTest_1,switch_check)"/>
+                                        <div class = "track">
+                                            <div class = "handle"></div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!--<div>-->
+                                    <!--<h2 style = "color:#ffffff"> test </h2>-->
+
+
+                                    <!--<input type = "text" ng-model = "input_text" placeholder="Insert Test Text"/>-->
+                                    <!--<button ng-click = "firebase_test(input_text)"> data test </button>-->
+                                    <!--<a ng-repeat="item in messages">-->
+                                        <!--<h2>{{item.user}}</h2>-->
+                                        <!--<h3>{{item.message}}</h3>-->
+
+                                    <!--</a>-->
+
+
+
+                                <!--</div>-->
+                            </ion-item>
+                    </div>
+                        <div class="item item-divider"> effect Test</div>
+                        <div class="item item-body">
+                            <ion-list>
+                                <ion-item>
+                                    <select ng-change="show_Effect(effect_value.value,ledTest_1)"
+                                            ng-model="effect_value"
+                                            ng-options="x.effectName for x in effect">
+                                    </select>
+                                </ion-item>
+
+                            </ion-list>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list card">
+                <div class="item item-divider">Color Temperature</div>
+                <div class="item item-body">
+                    <form class="list">
+                        <ion-item class="range range-positive">
+                            <input type="range" value="2700" min="0" max="10000" ng-model="rangeValue"
+                                   ng-change="drag(rangeValue,ledTest_1)">
+                            <div> {{rangeValue}} K</div>
+                        </ion-item>
+                    </form>
+                </div>
+            </div>
+            <div class="list card">
+                <div class="item item-divider">Brightness</div>
+                <div class="item item-body">
+                    <form class="list">
+                        <ion-item class="range range-positive">
+                            <input type="range" value="50" min="0" max="255" ng-model="brightness_value"
+                                   ng-change="brightdrag(brightness_value,ledTest_1)">
+                            <div> {{brightness_value}}</div>
+
+                        </ion-item>
+                    </form>
+                </div>
+            </div>
+
+            <!-- speed ( * modify need ! )  -->
+            <div class="list card">
+                <div class="item item-divider">Speed</div>
+                <div class="item item-body">
+                    <form class="list">
+                        <ion-item class="range range-positive">
+
+                            <input type="range" value="50" min="0" max="255" ng-model="speed"
+                                   ng-change="speed_check(speed,ledTest_1)"/>
+                            <div> {{speed}}</div>
+                        </ion-item>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

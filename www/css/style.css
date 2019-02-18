@@ -1,15 +1,300 @@
 /* Empty. Add your own CSS if you like */
-.progress-wrapper{
+.progress-wrapper {
     position: relative;
-    margin:20px auto;
+    margin: 20px auto;
     font-size: 21px;
 }
-.progress{
+
+.progress {
     position: absolute;
     width: 100%;
     height: 100%;
     line-height: 9em;
-    font-size:1em;
+    font-size: 1em;
     text-align: center;
     font-weight: 100;
 }
+
+
+.gradient-button {
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.gradient-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 8px 10px 12px;
+}
+
+.gradient-button-1 {
+    background-image: linear-gradient(to right, #E040FB 0%, #F7BB97 51%, #DD5E89 100%)
+}
+
+.gradient-button-1:hover {
+    background-position: right center;
+}
+
+.gradient-button-2 {
+    background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)
+}
+
+.gradient-button-2:hover {
+    background-position: right center;
+}
+
+.gradient-button-3 {
+    background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)
+}
+
+.gradient-button-3:hover {
+    background-position: right center;
+}
+
+.gradient-button-4 {
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+}
+
+.gradient-button-4:hover {
+    background-position: right center;
+}
+
+.disConnect-font {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    margin: 25px;
+}
+
+.Connect-font {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    margin: 25px;
+}
+
+.mid-title {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.theme-main-color {
+    background-color: black;
+    /*background-color : black;*/
+}
+
+.theme-color-test {
+    background-size: 300px;
+    /*background-color: gray;*/
+    background-image: url('../img/test_background.jpg');
+}
+
+.contact-font {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 50px;
+}
+
+.main-title {
+    padding : 10px 0px 0px 50px;
+    /*font-size : 15px; !important;*/
+}
+
+.colorpicker-maintitle {
+    font-size  : 25px;
+    color : #ffffff;
+    text-decoration : none;
+}
+
+.colorpicker-subtitle {
+    font-size : 15px;
+    color : #FFFFFF;
+    border : 0;
+    text-decoration : none;
+}
+
+
+/* Select css start -->*/
+
+
+select {
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    /*background: url(이미지 경로) no-repeat 95% 50%; !* 화살표 모양의 이미지 *! */
+}
+
+select {
+    width: 200px; /* 원하는 너비설정 */
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit; /* 폰트 상속 */
+    background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+    border: 1px solid #999;
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/*Select css End */
+
+
+/*custom background css start*/
+
+.page-background {
+    background-image: url('../img/background-black-theme.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*custom background css end*/
+
+/*custom location css start */
+
+.div-center {
+
+    width: 30%;
+    height: 30%;
+}
+
+.main-image-convert {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: auto;
+}
+
+.image-button-convert {
+    height: 100%;
+    width: auto;
+}
+
+.image-icon-convert {
+    position: absolute;
+    height: 120%;
+    width: auto;
+    bottom : 0%;
+}
+
+.image-icon-convert-big {
+    position: absolute;
+    height: 80%;
+    width: auto;
+    bottom : 25%;
+}
+
+
+
+
+
+/*custom location css end*/
+
+/*neon sign font css start*/
+
+.neon-pink {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.neon-orange {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFBB00, 0 0 70px #FFBB00, 0 0 80px #FFBB00, 0 0 100px #FFBB00, 0 0 150px #FFBB00;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.neon-orange-low {
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    font-weight: bold;
+    /*width : 100%;*/
+    /*text-align : center;*/
+}
+
+.neon-blue-low {
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1266FF, 0 0 40px #1266FF, 0 0 50px #1266FF;
+    font-weight: bold;
+    /*width : 100%;*/
+    /*text-align : center;*/
+}
+
+.neon-white {
+    color: #ffffff;
+    /*font-size : 20px;*/
+    text-shadow: 0 0 5px #fff;
+    font-weight: bold;
+}
+
+/*neon sign font css end*/
+
+
+/*dashboard css start*/
+
+.dashboard-title-text {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.dashboard-title-button {
+    background-color: #747474;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/*dashborard css end*/
+
+/*led css start*/
+
+.led-title-button{
+    background-color: #747474;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/*led css end*/

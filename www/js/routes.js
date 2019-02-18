@@ -7,70 +7,90 @@ angular.module('app.routes', [])
         // Set up the various states which the app can be in.
         // Each state's controller can be found in controllers.js
         $stateProvider
-
-
             .state('tabsController.colorPicker', {
                 url: '/page2',
                 views: {
                     'tab1': {
-                        templateUrl: 'templates/colorPicker.html',
+                        templateUrl: 'templates/dashboard.html',
+
+                    }
+                }
+            })
+            .state('tabsController.ledTest1', {
+                url: '/Control Room 01',
+                views: {
+                    'tab4': {
+                        templateUrl: 'templates/LED_1.html',
                         controller: 'colorPickerCtrl'
                     }
                 }
             })
 
-            .state('tabsController.alarm', {
-                url: '/page3',
-                views: {
-                    'tab2': {
-                        templateUrl: 'templates/alarm.html',
-                        controller: 'alarmCtrl'
-                    }
-                }
-            })
-
-            .state('tabsController.weather', {
-                url: '/page4',
-                views: {
-                    'tab3': {
-                        templateUrl: 'templates/weather.html',
-                        controller: 'weatherCtrl'
-                    }
-                }
-            })
-            .state('tabsController.settings', {
-                url: '/page5',
-                views: {
-                    'tab4': {
-                        templateUrl: 'templates/settings.html',
-                        controller: 'settingsCtrl'
-                    }
-                }
-            })
-
-            .state('tabsController.support', {
-                url: '/page6',
+            .state('tabsController.ledTest2', {
+                url: '/Control Room 02',
                 views: {
                     'tab5': {
-                        templateUrl: 'templates/support.html',
-                        controller: 'supportCtrl'
+                        templateUrl: 'templates/LED_2.html',
+                        controller: 'colorPickerCtrl'
                     }
                 }
             })
-            .state('tabsController.colorPalette', {
-                url: '/page7',
+
+            .state('tabsController.ledTest3', {
+                url: '/Control Room 03',
                 views: {
                     'tab6': {
-                        templateUrl: 'templates/colorPalette.html',
-                        // new controller
-                        controller: 'paletteCtrl'
+                        templateUrl: 'templates/LED_3.html',
+                        controller: 'colorPickerCtrl'
                     }
                 }
             })
+
+            .state('tabsController.ledTest4', {
+                url: '/Control Room 04',
+                views: {
+                    'tab7': {
+                        templateUrl: 'templates/LED_4.html',
+                        controller: 'colorPickerCtrl'
+                    }
+                }
+            })
+
+            .state('tabsController.remote',{
+                url: '/page9',
+                views : {
+                    'tab8' : {
+                        templateUrl: 'templates/Remote_Control.html',
+                        controller : 'remoteCtrl'
+                    }
+                }
+            })
+            .state('tabsController.login', {
+                url: '/page10',
+                views: {
+                    'tab9': {
+                        templateUrl: 'templates/login.html',
+                        controller: 'loginCtrl'
+                    }
+                }
+            })
+
+
+            .state('tabsController.sign_up', {
+                url: '/page11',
+                views: {
+                    'tab10': {
+                        templateUrl: 'templates/sign_up.html',
+                        controller: 'signupCtrl'
+                    }
+                }
+            })
+
             .state('tabsController', {
                 url: '/page1',
                 templateUrl: 'templates/tabsController.html',
                 abstract: true
             })
-        $urlRouterProvider.otherwise('/page1/page2')
+
+        $urlRouterProvider.otherwise('/page1/page10')
     });
